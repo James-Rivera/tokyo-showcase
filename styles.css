@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'HeroFont'; 
+  src: url('Hanson-Bold.otf'); 
+}
+
+:root {
+  --hero-font: 'HeroFont';
+
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    background: #DDCADB;
+}
+
+
+/*Hero Section*/
+.layered-hero{
+    top:0;
+    position: relative;
+    min-height: 250vh;
+}
+
+.sky, .tokyo, .closeup-tokyo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+
+.sky{
+    background-image: url('sky.png');
+    z-index: 1;
+    background-attachment: fixed;
+}
+
+.tokyo{
+    background-image: url('tokyo.png');
+    z-index: 3;
+    bottom: 0;
+    transform: translateY(-800px);
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+
+.closeup-tokyo{
+    background-image: url('closeup-tokyo.png');
+    z-index: 4;
+    background-position: center bottom;
+}
+
+
+.content-layer{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+
+.hero-title{
+    color: white;
+    text-align: center;
+    font-family: var(--hero-font);
+    font-size: 200px;
+}
