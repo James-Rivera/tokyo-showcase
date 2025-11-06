@@ -20,6 +20,19 @@ body{
 
 /* Header Section */
 
+.navbar-toggler {
+    z-index: 1001;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-collapse {
+    background-color: transparent;
+}
+
 .navbar-logo {
     height: 50px;
     width: auto;
@@ -212,6 +225,347 @@ body{
     box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
 }
 
+/* Gradient Transition Section */
+.gradient-transition {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, 
+    rgba(221, 202, 219, 0) 0%,
+    rgba(255, 255, 255, 0.3) 30%,
+    rgba(255, 255, 255, 0.7) 60%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  position: relative;
+  z-index: 5;
+  margin-top: -150px;
+}
+
+/* Gradient Transition Reverse */
+.gradient-transition-reverse {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.7) 30%,
+    rgba(221, 202, 219, 0.5) 60%,
+    rgba(221, 202, 219, 1) 100%
+  );
+  position: relative;
+  z-index: 5;
+}
+
+/* Carousel Section */
+#carousel-section {
+  position: relative;
+  z-index: 10;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel-caption {
+  bottom: 60px !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: auto;
+  max-width: 80%;
+  text-align: center;
+  z-index: 2;
+}
+
+.carousel-caption h3 {
+  font-family: var(--secondary-font);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  margin-bottom: 15px;
+  color: white;
+  font-weight: 700;
+}
+
+.carousel-caption p {
+  font-family: var(--secondary-font);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  margin-bottom: 0;
+  color: white;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
+.carousel-indicators button.active {
+  opacity: 1;
+  background-color: #ED1C24;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(237,28,36,0.8);
+}
+
+/* Featured Destinations Section */
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.destination-image {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.destination-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover .destination-image img {
+  transform: scale(1.1);
+}
+
+.destination-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
+  color: white;
+  padding: 30px 20px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.destination-overlay h3 {
+  font-family: var(--hero-font);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.destination-overlay p {
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Stats Section */
+.stats-item {
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.stats-item:hover {
+  transform: scale(1.1);
+}
+
+/* Activities Section */
+.activity-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.activity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(237,28,36,0.2);
+}
+
+.activity-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #ED1C24;
+  transition: all 0.3s ease;
+}
+
+.activity-card:hover .activity-icon {
+  transform: scale(1.2) rotate(5deg);
+  color: #B71C1C;
+}
+
+.activity-card h4 {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.activity-card p {
+  font-family: var(--secondary-font);
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Icon Boxes for Experience Section */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.icon-box:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* Footer Styles */
+.footer {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ED1C24 0%, #B71C1C 50%, #ED1C24 100%);
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+}
+
+.footer-tagline {
+  font-family: var(--secondary-font);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.footer-heading {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: #ED1C24;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  font-family: var(--secondary-font);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  background: #ED1C24;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: white;
+  color: #ED1C24;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(237, 28, 36, 0.3);
+}
+
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 40px 0 30px;
+}
+
+.footer-copyright {
+  font-family: var(--secondary-font);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
 
 /* Responsive - Mobile */
 
@@ -225,6 +579,9 @@ body{
     background-color: white;
     padding: 15px;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1001;
   }
   
   .nav-link-custom {
@@ -270,6 +627,71 @@ body{
   
   .hero-description{
     font-size: 12px;
+  }
+
+  .gradient-transition {
+    height: 100px;
+    margin-top: -100px;
+  }
+
+  .gradient-transition-reverse {
+    height: 100px;
+  }
+
+  .carousel-inner {
+    border-radius: 15px !important;
+  }
+
+  .carousel-item img {
+    height: 300px !important;
+  }
+
+  .carousel-caption {
+    bottom: 30px !important;
+    max-width: 90%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem !important;
+  }
+
+  .destination-image {
+    height: 280px;
+  }
+
+  .activity-icon {
+    font-size: 2.5rem;
+  }
+
+  .activity-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .activity-card p {
+    font-size: 0.9rem;
+  }
+
+  .icon-box {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .footer-logo {
+    height: 40px;
+  }
+
+  .footer-heading {
+    margin-top: 30px;
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    margin-bottom: 20px;
   }
 }
 
