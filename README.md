@@ -1,1 +1,1 @@
-A Activity for WEBDEV showcasing Tokyo
+An Activity for WEBDEV showcasing Tokyo
